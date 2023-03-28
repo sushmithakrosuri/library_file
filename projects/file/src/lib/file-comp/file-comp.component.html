@@ -1,0 +1,22 @@
+<p>file-comp works!</p>
+<p>Hello</p>
+ <!-- <input type="file" (click)="onFileChange($event)"/> -->
+
+ <input type="file" (change)="handleFileInput($event, format)"  accept=".jpg,.jpeg,.png,.gif">
+<button (click)="format = 'base64'">Base64</button>
+<button (click)="format = 'bytearray'">ByteArray</button>
+
+ <table>
+    <thead>
+        <th>name</th>
+        <th>size</th>
+        <th>type</th>
+        <th>Content</th>
+    </thead>
+    <tbody>
+        <td>{{name}}</td>
+        <td>{{size}}</td>
+        <td>{{type}}</td>
+        <td>{{content}}</td>
+    </tbody>
+</table>
